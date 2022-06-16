@@ -1,4 +1,6 @@
 use clap::Parser;
+use std::fs;
+use std::io::Write;
 use std::path::PathBuf;
 
 #[derive(Parser)]
@@ -10,5 +12,8 @@ struct Cli {
 
 fn main() {
     let args = Cli::parse();
-    csv_reader(args.input).unwrap();
+    let transactions =
+        fs::read_to_string(args.input).expect("Something went wrong reading the file");
+    let mut output = fs::File::create(args.output).unwrap();
+    output.write(transactions.as_bytes()).unwrap();
 }
