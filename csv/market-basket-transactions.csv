@@ -1,20 +1,20 @@
 beer,wine,cheese
-beer,potato chips
+beer,potato_chips
 eggs,flower,butter,cheese
-eggs,flower,butter,beer,potato chips
+eggs,flower,butter,beer,potato_chips
 wine,cheese
-potato,chips
+potato_chips
 eggs,flower,butter,wine,cheese
-eggs,flower,butter,beer,potato chips
+eggs,flower,butter,beer,potato_chips
 wine,beer
-beer,potato chips
+beer,potato_chips
 butter,eggs
-beer,potato chips
+beer,potato_chips
 flower,eggs
-beer,potato, chips
+beer,potato_chips
 eggs,flower,butter,wine,cheese
-beer,wine,potato chips,cheese
+beer,wine,potato_chips,cheese
 wine,cheese
-beer,potato chips
+beer,potato_chips
 wine,cheese
-beer,potato chips
+beer,potato_chips
