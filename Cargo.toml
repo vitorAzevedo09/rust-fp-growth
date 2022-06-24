@@ -7,5 +7,3 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "3.0", features = ["derive"] }
-ordered-float = { version = "3.0" }
-indexmap = { version = "1.9.1" }
