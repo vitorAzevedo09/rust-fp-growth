@@ -1,6 +1,8 @@
 use std::collections::BTreeMap;
 use std::collections::HashMap;
 
+mod tree;
+
 pub fn make_transactions(dataset: String) -> Vec<Vec<String>> {
     dataset
         .split("\n")
