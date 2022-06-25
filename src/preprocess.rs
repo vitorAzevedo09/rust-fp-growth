@@ -1,5 +1,5 @@
-use std::collections::HashMap;
 use std::collections::BTreeMap;
+use std::collections::HashMap;
 
 pub fn make_transactions(dataset: String) -> Vec<Vec<String>> {
     dataset
@@ -26,17 +26,17 @@ pub fn filter_itemsets(
     len: usize,
     min_sup: f64,
 ) -> BTreeMap<String, u64> {
-    let filtered_itemsets: <String, u64> = BTreeMap::new();  
+    let mut filtered_itemsets: BTreeMap<String, u64> = BTreeMap::new();
     for (hash, support) in itemsets {
         let sup = len as f64 * min_sup;
-        if sup <= support as f64 {
-            filtered_itemsets.entry(&hash).or_insert(support);
+        if sup as u64 <= support {
+            filtered_itemsets.entry(hash).or_insert(support);
         }
     }
     filtered_itemsets
 }
 
-pub fn order_row(mut row: Vec<String>, ordered_itemsets: &HashMap<String, u64>) -> Vec<String> {
+pub fn order_row(mut row: Vec<String>, ordered_itemsets: &BTreeMap<String, u64>) -> Vec<String> {
     row.sort_by(|a, b| {
         ordered_itemsets
             .get(a)

@@ -25,7 +25,7 @@ fn main() {
     let itemsets = preprocess::make_itemsets(&transactions);
 
     let ordered_itemsets =
-        preprocess::filter_and_order_itemsets(itemsets, transactions.len(), args.minimun_sup);
+        preprocess::filter_itemsets(itemsets, transactions.len(), args.minimun_sup);
 
     let mut output = fs::File::create(args.output).unwrap();
 
